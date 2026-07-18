@@ -1,0 +1,5 @@
+{
+  "_comment": "Default Sony A7IV Natural profile - replace with real fingerprint data",
+  "r_mean": 128.5, "g_mean": 126.2, "b_mean": 124.8,
+  "noise_sigma": 2.1, "sharpness": 0.75, "saturation": 1.05
+}

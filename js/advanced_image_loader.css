@@ -1,0 +1,760 @@
+/* ---
+// Filename: ../ComfyUI-OmniSimulator/js/advanced_image_loader.css
+// --- */
+
+.omnisimulator-adv-loader-container {
+	background: #0d0f12;
+	padding: 16px;
+	border-radius: 4px;
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Brand Row */
+.omnisimulator-adv-loader-brand-row {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	margin-bottom: 12px;
+}
+
+.omnisimulator-adv-loader-logo {
+	width: 140px;
+	height: auto;
+	opacity: 0.85;
+}
+
+.omnisimulator-adv-loader-version {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(122%, -50%);
+	font-family: monospace;
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.5);
+	white-space: nowrap;
+}
+
+/* Top Bar - Mode + Stats */
+.omnisimulator-adv-loader-topbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 12px;
+	padding: 10px 12px;
+	background: rgba(255, 255, 255, 0.04);
+	border-radius: 4px;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.omnisimulator-adv-loader-topbar-left {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.omnisimulator-adv-loader-topbar-right {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 12px;
+	color: rgba(249, 250, 251, 0.7);
+}
+.omnisimulator-adv-loader-separator {
+	color: rgba(255, 255, 255, 0.3);
+}
+.omnisimulator-adv-loader-mode-select {
+	display: flex;
+	align-items: center;
+}
+.omnisimulator-adv-loader-progress-badge {
+	font-size: 11px;
+	color: #818cf8;
+	font-weight: 600;
+	background: rgba(129, 140, 248, 0.15);
+	padding: 4px 8px;
+	border-radius: 4px;
+}
+
+/* Mode Badge */
+.omnisimulator-adv-loader-mode-badge {
+	padding: 6px 12px;
+	border-radius: 4px;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
+
+.omnisimulator-adv-loader-mode-txt2img {
+	background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+	color: #ffffff;
+	border: 2px solid #a78bfa;
+}
+
+.omnisimulator-adv-loader-mode-img2img {
+	background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+	color: #ffffff;
+	border: 2px solid #60a5fa;
+}
+
+.omnisimulator-adv-loader-mode-selector {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 16px;
+	padding: 12px;
+	background: rgba(255, 255, 255, 0.03);
+	border-radius: 4px;
+	border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.omnisimulator-adv-loader-mode-selector label {
+	color: rgba(249, 250, 251, 0.7);
+	font-size: 11px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.omnisimulator-adv-loader-mode-dropdown {
+	background: rgba(255, 255, 255, 0.05);
+	color: #f9fafb;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	padding: 6px 10px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: 500;
+	outline: none;
+}
+.omnisimulator-adv-loader-mode-dropdown:hover {
+	background: rgba(255, 255, 255, 0.08);
+	border-color: #818cf8;
+	transition: none;
+}
+.omnisimulator-adv-loader-mode-dropdown:focus {
+	border-color: #a78bfa;
+}
+.omnisimulator-adv-loader-queue-all-btn {
+	background: #7c3aed;
+	color: #ffffff;
+	border: none;
+	padding: 10px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 13px;
+}
+.omnisimulator-adv-loader-queue-all-btn:hover {
+	background: #6d28d9;
+	transition: none;
+}
+.omnisimulator-adv-loader-add-latent-btn {
+	background: #059669;
+	color: #ffffff;
+	border: none;
+	padding: 10px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 13px;
+}
+.omnisimulator-adv-loader-add-latent-btn:hover {
+	background: #047857;
+	transition: none;
+}
+.omnisimulator-adv-loader-batch-add-btn {
+	background: #059669;
+	color: #ffffff;
+	border: none;
+	padding: 10px 14px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 13px;
+}
+.omnisimulator-adv-loader-batch-add-btn:hover {
+	background: #047857;
+	transition: none;
+}
+.omnisimulator-adv-loader-batch-add-controls {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+.omnisimulator-adv-loader-batch-count-input {
+	width: 50px;
+	padding: 9px 8px;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	border-radius: 4px;
+	background: rgba(255, 255, 255, 0.05);
+	color: #f9fafb;
+	font-size: 13px;
+	text-align: center;
+}
+.omnisimulator-adv-loader-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 16px;
+}
+.omnisimulator-adv-loader-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 12px;
+}
+.omnisimulator-adv-loader-upload-btn {
+	background: #6366f1;
+	color: #ffffff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 13px;
+}
+.omnisimulator-adv-loader-upload-btn:hover {
+	background: #4f46e5;
+	transition: none;
+}
+.omnisimulator-adv-loader-upload-btn:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+.omnisimulator-adv-loader-delete-all-btn {
+	background: #dc2626;
+	color: #ffffff;
+	border: none;
+	padding: 10px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 13px;
+}
+.omnisimulator-adv-loader-delete-all-btn:hover {
+	background: #ef4444;
+	transition: none;
+}
+.omnisimulator-adv-loader-duplicate-btn {
+	background: #374151;
+	color: #ffffff;
+	border: none;
+	padding: 10px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 13px;
+}
+.omnisimulator-adv-loader-duplicate-btn:hover {
+	background: #4b5563;
+	transition: none;
+}
+.omnisimulator-adv-loader-sync-btn {
+	background: #4f46e5;
+	color: #ffffff;
+	border: none;
+	padding: 10px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 13px;
+}
+.omnisimulator-adv-loader-sync-btn:hover {
+	background: #6366f1;
+	transition: none;
+}
+.omnisimulator-adv-loader-stats {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	color: #f9fafb;
+	font-size: 12px;
+}
+.omnisimulator-adv-loader-count {
+	font-weight: 600;
+	color: rgba(249, 250, 251, 0.9);
+}
+.omnisimulator-adv-loader-total {
+	font-weight: 500;
+	color: rgba(167, 139, 250, 0.9);
+}
+.omnisimulator-adv-loader-progress {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12px 16px;
+	background: rgba(167, 139, 250, 0.08);
+	border-radius: 4px;
+	margin-bottom: 16px;
+	border: 1px solid rgba(167, 139, 250, 0.2);
+}
+.omnisimulator-adv-loader-progress .omnisimulator-adv-loader-progress-label {
+	color: rgba(249, 250, 251, 0.7);
+	font-size: 11px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.omnisimulator-adv-loader-progress .omnisimulator-adv-loader-progress-value {
+	color: #a78bfa;
+	font-size: 16px;
+	font-weight: 600;
+	font-variant-numeric: tabular-nums;
+}
+.omnisimulator-adv-loader-gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+	gap: 12px;
+	min-height: 120px;
+	overflow: visible;
+	position: relative;
+}
+.omnisimulator-adv-loader-empty {
+	grid-column: 1 / -1;
+	text-align: center;
+	padding: 48px 24px;
+	background: rgba(255, 255, 255, 0.02);
+	border-radius: 4px;
+	border: 1px dashed rgba(167, 139, 250, 0.2);
+}
+.omnisimulator-adv-loader-empty p {
+	margin: 8px 0;
+	color: rgba(249, 250, 251, 0.7);
+	font-size: 13px;
+	font-weight: 500;
+}
+.omnisimulator-adv-loader-empty .omnisimulator-adv-loader-hint {
+	font-size: 12px;
+	color: rgba(129, 140, 248, 0.6);
+	font-weight: 400;
+}
+.omnisimulator-adv-loader-item {
+	background: rgba(255, 255, 255, 0.04);
+	border-radius: 4px;
+	overflow: hidden;
+	cursor: move;
+	position: relative;
+	border: 2px solid rgba(255, 255, 255, 0.08);
+}
+.omnisimulator-adv-loader-item:hover {
+	border-color: rgba(99, 102, 241, 0.5);
+	transition: none;
+}
+.omnisimulator-adv-loader-item-active {
+	border-color: #a78bfa !important;
+	background: rgba(167, 139, 250, 0.08);
+}
+.omnisimulator-adv-loader-item-processing {
+	border-color: #10b981 !important;
+	background: rgba(16, 185, 129, 0.08);
+}
+.omnisimulator-adv-loader-item-done {
+	opacity: 0.5;
+}
+.omnisimulator-adv-loader-index-badge {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	background: #6366f1;
+	color: #ffffff;
+	padding: 4px 8px;
+	border-radius: 4px;
+	font-size: 10px;
+	font-weight: 600;
+	z-index: 10;
+}
+.omnisimulator-adv-loader-processing-indicator {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #10b981;
+	color: #ffffff;
+	padding: 8px 16px;
+	border-radius: 4px;
+	font-size: 11px;
+	font-weight: 600;
+	z-index: 10;
+}
+.omnisimulator-adv-loader-active-indicator {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	background: #7c3aed;
+	color: #ffffff;
+	padding: 4px 10px;
+	border-radius: 4px;
+	font-size: 10px;
+	font-weight: 600;
+	z-index: 10;
+}
+.omnisimulator-adv-loader-done-indicator {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	background: #10b981;
+	color: #ffffff;
+	width: 24px;
+	height: 24px;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	z-index: 10;
+}
+.omnisimulator-adv-loader-item.omnisimulator-adv-loader-drop-before::before {
+	content: '';
+	position: absolute;
+	top: -7px;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background: #a78bfa;
+	border-radius: 2px;
+	z-index: 1000;
+	pointer-events: none;
+}
+.omnisimulator-adv-loader-item.omnisimulator-adv-loader-drop-after::after {
+	content: '';
+	position: absolute;
+	bottom: -7px;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background: #a78bfa;
+	border-radius: 2px;
+	z-index: 1000;
+	pointer-events: none;
+}
+.omnisimulator-adv-loader-thumb {
+	width: 100%;
+	height: 140px;
+	overflow: hidden;
+	background: #000000;
+	position: relative;
+}
+.omnisimulator-adv-loader-thumb img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+.omnisimulator-adv-loader-controls {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 10px;
+	background: rgba(0, 0, 0, 0.3);
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.omnisimulator-adv-loader-controls label {
+	color: rgba(249, 250, 251, 0.6);
+	font-size: 11px;
+	font-weight: 500;
+}
+.omnisimulator-adv-loader-repeat-input {
+	width: 55px;
+	background: rgba(255, 255, 255, 0.06);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	color: #f9fafb;
+	padding: 6px;
+	border-radius: 4px;
+	text-align: center;
+	font-size: 12px;
+	font-weight: 600;
+	outline: none;
+}
+.omnisimulator-adv-loader-repeat-input:hover {
+	background: rgba(255, 255, 255, 0.08);
+	border-color: #818cf8;
+	transition: none;
+}
+.omnisimulator-adv-loader-repeat-input:focus {
+	border-color: #a78bfa;
+}
+.omnisimulator-adv-loader-delete-btn {
+	margin-left: auto;
+	background: #ef4444;
+	color: #ffffff;
+	border: none;
+	width: 28px;
+	height: 28px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.omnisimulator-adv-loader-delete-btn:hover {
+	background: #dc2626;
+	transition: none;
+}
+.omnisimulator-adv-loader-info {
+	padding: 8px 10px;
+	font-size: 11px;
+	background: rgba(0, 0, 0, 0.2);
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.omnisimulator-adv-loader-info .omnisimulator-adv-loader-filename {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-bottom: 4px;
+	color: rgba(249, 250, 251, 0.9);
+	font-weight: 500;
+	line-height: 1.3;
+}
+.omnisimulator-adv-loader-info .omnisimulator-adv-loader-dimensions {
+	color: #818cf8;
+	font-size: 11px;
+	font-weight: 600;
+}
+
+/* ===== Txt2Img Mode Styles ===== */
+
+/* Batch add controls */
+.omnisimulator-adv-loader-batch-add-controls {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.omnisimulator-adv-loader-batch-count-input {
+	width: 54px;
+	background: rgba(255, 255, 255, 0.06);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	color: #f9fafb;
+	padding: 8px;
+	border-radius: 4px;
+	text-align: center;
+	font-size: 12px;
+	font-weight: 600;
+	outline: none;
+}
+
+.omnisimulator-adv-loader-batch-count-input:hover {
+	background: rgba(255, 255, 255, 0.08);
+	border-color: #818cf8;
+	transition: none;
+}
+
+.omnisimulator-adv-loader-batch-count-input:focus {
+	border-color: #a78bfa;
+}
+
+.omnisimulator-adv-loader-batch-add-btn {
+	background: #8b5cf6;
+	color: #ffffff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 13px;
+	white-space: nowrap;
+}
+
+.omnisimulator-adv-loader-batch-add-btn:hover {
+	background: #7c3aed;
+	transition: none;
+}
+
+.omnisimulator-adv-loader-add-latent-btn {
+	background: #8b5cf6;
+	color: #ffffff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 13px;
+}
+
+.omnisimulator-adv-loader-add-latent-btn:hover {
+	background: #7c3aed;
+	transition: none;
+}
+
+/* Empty latent placeholder */
+.omnisimulator-adv-loader-latent-thumb {
+	width: 100%;
+	height: 140px;
+	overflow: hidden;
+	position: relative;
+	background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+}
+
+.omnisimulator-adv-loader-latent-aspect {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4px;
+	color: #ffffff;
+}
+
+.omnisimulator-adv-loader-latent-aspect-icon {
+	font-size: 24px;
+	opacity: 0.9;
+}
+
+.omnisimulator-adv-loader-latent-aspect-label {
+	font-size: 13px;
+	font-weight: 600;
+	opacity: 0.95;
+	background: rgba(0, 0, 0, 0.2);
+	padding: 4px 10px;
+	border-radius: 4px;
+}
+
+.omnisimulator-adv-loader-latent-id {
+	position: absolute;
+	bottom: 8px;
+	left: 8px;
+	background: rgba(0, 0, 0, 0.5);
+	color: rgba(255, 255, 255, 0.8);
+	padding: 4px 8px;
+	border-radius: 4px;
+	font-size: 10px;
+	font-weight: 500;
+	font-family: 'Monaco', 'Consolas', 'Courier New', monospace;
+}
+
+.omnisimulator-adv-loader-latent-resolution {
+	color: #c4b5fd;
+	font-size: 11px;
+	font-weight: 600;
+}
+
+/* Aspect ratio preview box */
+.omnisimulator-adv-loader-aspect-preview {
+	max-width: 80%;
+	max-height: 80%;
+	background: rgba(255, 255, 255, 0.1);
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px;
+}
+
+.omnisimulator-adv-loader-aspect-content {
+	text-align: center;
+	color: white;
+}
+
+/* === Drag and Drop File Upload Visual Feedback === */
+.omnisimulator-adv-loader-drag-over {
+	position: relative;
+	outline: 3px dashed #60a5fa !important;
+	outline-offset: -3px !important;
+	background: rgba(59, 130, 246, 0.1) !important;
+	box-shadow: 0 0 20px rgba(59, 130, 246, 0.3) !important;
+}
+
+.omnisimulator-adv-loader-drag-over::before {
+	content: "Drop images here to upload";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(59, 130, 246, 0.95);
+	color: white;
+	padding: 20px 40px;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	z-index: 1000;
+	pointer-events: none;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+	border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ===== Selection Mode Styles ===== */
+
+.omnisimulator-adv-loader-select-all-btn,
+.omnisimulator-adv-loader-deselect-all-btn,
+.omnisimulator-adv-loader-cancel-selection-btn,
+.omnisimulator-adv-loader-enter-selection-btn {
+	background: #374151;
+	color: #ffffff;
+	border: none;
+	padding: 10px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 13px;
+}
+
+.omnisimulator-adv-loader-select-all-btn:hover,
+.omnisimulator-adv-loader-deselect-all-btn:hover,
+.omnisimulator-adv-loader-cancel-selection-btn:hover,
+.omnisimulator-adv-loader-enter-selection-btn:hover {
+	background: #4b5563;
+	transition: none;
+}
+
+.omnisimulator-adv-loader-delete-selected-btn {
+	background: #dc2626;
+	color: #ffffff;
+	border: none;
+	padding: 10px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 13px;
+}
+
+.omnisimulator-adv-loader-delete-selected-btn:hover {
+	background: #ef4444;
+	transition: none;
+}
+
+.omnisimulator-adv-loader-delete-selected-btn:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+/* Selection checkbox in card */
+.omnisimulator-adv-loader-selection-checkbox {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	z-index: 20;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.omnisimulator-adv-loader-image-checkbox {
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+	accent-color: #8b5cf6;
+}
+
+/* Selection mode item styling */
+.omnisimulator-adv-loader-item-selection {
+	cursor: pointer;
+}
+
+.omnisimulator-adv-loader-item-selection:hover {
+	border-color: #8b5cf6;
+	transition: none;
+}
+
+.omnisimulator-adv-loader-item-selected {
+	border-color: #8b5cf6 !important;
+	background: rgba(139, 92, 246, 0.15);
+}
+
+.omnisimulator-adv-loader-item-selection .omnisimulator-adv-loader-controls {
+	opacity: 0.5;
+	pointer-events: none;
+}
