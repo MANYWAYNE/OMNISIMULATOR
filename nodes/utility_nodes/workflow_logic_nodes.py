@@ -14,14 +14,13 @@ _LANCZOS = getattr(Image, "LANCZOS", None) or Image.Resampling.LANCZOS
 
 try:
     _current_dir = os.path.dirname(os.path.realpath(__file__))
-    # Пытаемся найти gemini_native.py в папке OMNISIMULATOR[cite: 4]
     _gn_path = os.path.join(_current_dir, 'gemini_native.py')
     
     if not os.path.exists(_gn_path):
         _gn_path = os.path.join(_ROOT, 'nodes', 'api_nodes', 'gemini_native.py')
 
     if os.path.exists(_gn_path):
-        _gn_spec = _ilu.spec_from_file_location('nova_gemini_native_wln', _gn_path)
+        _gn_spec = _ilu.spec_from_file_location('omnisimulator_gemini_native', _gn_path)
         _gn_mod  = _ilu.module_from_spec(_gn_spec)
         _gn_spec.loader.exec_module(_gn_mod)
         OmniSimulator_GeminiNative = _gn_mod.OmniSimulator_GeminiNative
