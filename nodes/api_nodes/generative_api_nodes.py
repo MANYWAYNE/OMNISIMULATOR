@@ -54,7 +54,7 @@ MODEL_CONFIG = {
     },
 }
 
-class Omni_GenerativeAPIBase:
+class OmniSimulator_GenerativeAPIBase:
     """Base class for generative API clients."""
     def __init__(self):
         self.api_key = ""
@@ -90,5 +90,5 @@ class Omni_GenerativeAPIBase:
             return result["images"][0]["url"]
         raise Exception("[OmniSimulator] No image URL in fal.ai response")
 
-NODE_CLASS_MAPPINGS = {}
-NODE_DISPLAY_NAME_MAPPINGS = {}
+NODE_CLASS_MAPPINGS = {"OmniSimulator_GenerativeAPIBase": OmniSimulator_GenerativeAPIBase}
+NODE_DISPLAY_NAME_MAPPINGS = {"OmniSimulator_GenerativeAPIBase": "Omni: Generative API Base"}

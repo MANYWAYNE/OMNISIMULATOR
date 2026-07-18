@@ -27,7 +27,7 @@ SAFETY_LEVELS = [
     "Block Most (Low+)",
 ]
 
-class Omni_GeminiNative:
+class OmniSimulator_GeminiNative:
     @classmethod
     def INPUT_TYPES(cls):
         return {
@@ -146,5 +146,5 @@ class Omni_GeminiNative:
                     text += part["text"]
         return (text.strip(),)
 
-NODE_CLASS_MAPPINGS = {"Omni_GeminiNative": Omni_GeminiNative}
-NODE_DISPLAY_NAME_MAPPINGS = {"Omni_GeminiNative": "Omni: Gemini Native"}
+NODE_CLASS_MAPPINGS = {"OmniSimulator_GeminiNative": OmniSimulator_GeminiNative}
+NODE_DISPLAY_NAME_MAPPINGS = {"OmniSimulator_GeminiNative": "Omni: Gemini Native"}
