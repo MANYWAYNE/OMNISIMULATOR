@@ -21,4 +21,17 @@ This module provides tools for fine-tuning the statistical characteristics of an
 * The developer is not responsible for the use of these tools to mislead third parties regarding the authenticity or origin of media content.  
 * The use of metadata synthesis functions must comply with applicable legal norms and standards of digital ethics.  
 ---
+## Dependency installation.
+
+* After installation "CMD"
+git clone https://github.com/MANYWAYNE/OMNISIMULATOR.git
+
+* It is necessary to install the dependencies "CMD"
+cd ComfyUI/custom_nodes/OMNISIMULATOR
+pip install -r requirements.txt
+
+* When installing dependencies, use the full path. Below is an example of the path where the node is located in my build
+D:\OMNIFLEX\App\python_embeded\python.exe -m pip install -r requirements.txt
+---
 [<img width="3440" height="924" alt="START" src="https://github.com/user-attachments/assets/79a549a3-788d-4a73-9f60-854ffd5ef570" />](https://t.me/omniflexinfo)
+
