@@ -13,8 +13,8 @@ This module provides tools for fine-tuning the statistical characteristics of an
 ---
 ### Metadata Management (Metadata Synthesis) 
 ##This module provides capabilities for advanced EXIF data manipulation:
-* *Metadata Synthesis: The OmniSimulator_SaveWithAuthenticMetadata and SynthesizeAuthenticMetadata nodes allow for the programmatic setting of camera parameters (model, software version, exposure). 
-* **Geolocation: An integrated database for simulating GPS coordinates corresponding to real-world metropolitan areas.  
+* Metadata Synthesis: The OmniSimulator_SaveWithAuthenticMetadata and SynthesizeAuthenticMetadata nodes allow for the programmatic setting of camera parameters (model, software version, exposure). 
+* Geolocation: An integrated database for simulating GPS coordinates corresponding to real-world metropolitan areas.  
 ---
 ### Ethical Use and DisclaimerWarning: 
 ##Warning: This software contains tools that can be used to alter digital fingerprints and manipulate metadata. 
