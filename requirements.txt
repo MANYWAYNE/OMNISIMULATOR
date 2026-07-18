@@ -40,7 +40,7 @@ lpips>=0.1.4
 kornia>=0.7.0
 
 # ── ExifTool — required at the OS level (not a pip package) for
-# "NOVA Save With Metadata" to inject EXIF/GPS/ICC data. Without it, the
+# "OmniSimulator Save With Metadata" to inject EXIF/GPS/ICC data. Without it, the
 # node still saves plain JPEGs, it just skips metadata injection and
 # prints a warning.
 # Windows : https://exiftool.org  →  add exiftool.exe to PATH
