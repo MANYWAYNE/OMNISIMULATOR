@@ -16,7 +16,7 @@ requests>=2.28.0          # Batch Image Generator (API calls)
 
 # ── OPTIONAL — every node below has a built-in, dependency-free fallback.
 # Installing these unlocks higher-quality results but nothing crashes
-# without them; NOVA prints a one-line notice explaining what's in use.
+# without them; OMNISIMULATOR prints a one-line notice explaining what's in use.
 
 # scikit-learn: Blend Colors node uses real k-means clustering.
 #   Without it: falls back to PIL palette quantization (slightly lower quality).

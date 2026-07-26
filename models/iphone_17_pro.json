@@ -1,0 +1,69 @@
+{
+  "model": "iPhone 17 Pro",
+  "generated": true,
+  "note": "Approximate synthetic data based on public camera specs and patterns from existing models. NOT real factory calibration.",
+  "timestamp": "2026-07-26T06:04:27.600331Z",
+  "camera_system": {
+    "main": {
+      "megapixels": 48,
+      "focal_length_mm_equiv": 24,
+      "sensor_size": "1/1.14",
+      "aperture": "f/1.6"
+    },
+    "ultrawide": {
+      "megapixels": 48,
+      "focal_length_mm_equiv": 13,
+      "fov_deg": 120
+    },
+    "telephoto": {
+      "megapixels": 12,
+      "focal_length_mm_equiv": 120,
+      "optical_zoom": 2
+    }
+  },
+  "chipset": "A19 Pro",
+  "color_space": "Display P3",
+  "white_balance_presets": [
+    "auto",
+    "daylight",
+    "cloudy",
+    "tungsten",
+    "fluorescent"
+  ],
+  "color_matrices": {
+    "xyz_to_camera": [
+      [
+        0.42462,
+        -0.10834,
+        0.05686
+      ],
+      [
+        -0.13957,
+        0.86276,
+        0.11694
+      ],
+      [
+        0.00352,
+        -0.17347,
+        0.65437
+      ]
+    ],
+    "camera_to_xyz": null
+  },
+  "lens_distortion": {
+    "k1": 0.057578,
+    "k2": 0.25259,
+    "k3": 0.010236,
+    "p1": 0.001219,
+    "p2": -0.001647
+  },
+  "black_levels": [
+    64,
+    64,
+    64,
+    64
+  ],
+  "white_level": 16383,
+  "cfa_pattern": "RGGB",
+  "source": "synthetic approximation 2026-07-26"
+}
